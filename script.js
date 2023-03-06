@@ -19,4 +19,4 @@ function closeModal() {
 
 button.addEventListener('click', openModal);
 close.addEventListener('click', closeModal);
-modal.addEventListener('click', closeModal);
+modalContainer.addEventListener('click', closeModal);
