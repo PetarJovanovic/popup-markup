@@ -33,15 +33,15 @@ body {
 }
 
 h1 {
-  color: lavander;
+  color: lavender;
 }
 
 h2 {
-  color: lavander;
+  color: lavender;
 }
 
 p {
-  color: lavander;
+  color: lavender;
 }
 
 .header {
@@ -92,6 +92,10 @@ p {
 
 hr {
   margin: 1.5rem 0;
+}
+
+.slide-up {
+  animation: slide-up ease 0.8s;
 }
 
 .content__button-container {
@@ -158,9 +162,18 @@ hr {
 
 @keyframes slide {
   from {
-    transform: translateY(-30);
+    transform: translateY(-20rem);
   }
   to {
     transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20rem);
   }
 }
