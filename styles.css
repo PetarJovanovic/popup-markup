@@ -52,13 +52,30 @@ p {
   margin-bottom: 2rem;
 }
 
-.popup {
+.popup-container {
   display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
   position: relative;
-  margin: 2rem;
-  padding: 1rem;
-  border: 1px solid white;
+  width: 80%;
+  margin: 5rem auto;
+  padding: 2rem;
   border-radius: 5px;
+  background-color: white;
+  animation: slide ease 0.8s;
+}
+
+.popup * {
+  color: black;
 }
 
 .popup__close {
@@ -74,7 +91,7 @@ p {
 }
 
 hr {
-  margin: 0.5rem 0;
+  margin: 1.5rem 0;
 }
 
 .content__button-container {
@@ -137,4 +154,13 @@ hr {
 .content__button p {
   font-size: 1.3rem;
   font-weight: 300;
+}
+
+@keyframes slide {
+  from {
+    transform: translateY(-30);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
